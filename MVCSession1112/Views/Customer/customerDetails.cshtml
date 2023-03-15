@@ -1,0 +1,68 @@
+﻿@model vmcustomer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>customerDetails</title>
+</head>
+<body>
+    
+    <form method="post">
+    <div>
+        <span>Name</span>
+            <input type="text" asp-for="cust.Name" />
+    </div>
+    <div>
+        <span>Phone</span>
+        <input type="text" asp-for="cust.Phone" />
+    </div>
+    <div>
+        <span>Amount</span>
+        <input type="text" asp-for="cust.amount" />
+    </div>
+    <div>
+        <input type="submit" value="Save" asp-action="Save1" />
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                        <th>
+                            Phone
+                        </th>
+                        <th>
+                            Amount
+                        </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Customer item in Model.liCust)
+                    {  
+                        <tr>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td>
+                                @item.Phone
+                            </td>
+                            <td>
+                                @item.amount
+                            </td>
+                        </tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

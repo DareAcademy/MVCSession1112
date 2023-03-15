@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form method="post">
+    @foreach (string item in (List<string>)ViewData["values"])
+    {
+        <div>
+        @item
+        </div>
+    }
+
+
+    @foreach (string item in ViewBag.values1)
+    {
+        <div>
+            @item
+        </div>
+    }
+
+    <div>
+        <input type="text" name="txt1" />
+    </div>
+
+    <div>
+        <input type="submit" value="Navigate" asp-action="Goto" />
+    </div>
+    </form>
+</body>
+</html>

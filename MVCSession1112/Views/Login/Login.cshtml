@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <form method="post">
+    <div>
+        <span>Username</span>
+        <input type="text" name="txt1" />
+    </div>
+    <div>
+        <span>Password</span>
+        <input type="text" name="txt2" />
+    </div>
+
+        <input type="submit" value="Login" asp-action="LoginValidate"  />
+
+    </form>
+</body>
+</html>

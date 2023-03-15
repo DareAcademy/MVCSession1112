@@ -1,0 +1,74 @@
+﻿
+@model Customer
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NewCustomer</title>
+	<script src="~/lib/jquery/dist/jquery.js"></script>
+	<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+	<link href="~/css/all.min.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <form method="post">
+
+        <div>
+            <span>
+                Name
+            </span>
+            <input type="text" asp-for="Name" />
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <span>
+                Phone
+            </span>
+            <input type="text" asp-for="Phone" />
+            <span asp-validation-for="Phone"></span>
+        </div>
+        <div>
+            <span>
+                Amount
+            </span>
+            <input type="text" asp-for="amount" />
+            <span asp-validation-for="amount"></span>
+        </div>
+        <div>
+            <span>
+                Password
+            </span>
+            <input type="password" asp-for="Password" />
+            
+        </div>
+        <div>
+            <span>
+                Confirm Password
+            </span>
+            <input type="password" asp-for="Confirm" />
+            <span asp-validation-for="Confirm"></span>
+        </div>
+        <div>
+            <span>
+                BDate
+            </span>
+            <input type="date" asp-for="BDate" />
+            <span asp-validation-for="Confirm"></span>
+        </div>
+        <div>
+            <input type="submit" value="Save" asp-action="SaveData" />
+            <input type="submit" value="Load" asp-action="Load" />
+        </div>
+    </form>
+</body>
+</html>

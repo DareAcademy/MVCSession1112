@@ -1,0 +1,30 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+body {
+}
+/*this is color style*/
+.xyz{
+    color:red
+}
+body {
+}
+
+.abc{
+    background-color:blue;
+}

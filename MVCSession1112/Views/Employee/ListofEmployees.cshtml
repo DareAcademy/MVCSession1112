@@ -1,0 +1,44 @@
+﻿@model List<MVCSession1112.Models.Employee>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListofEmployees</title>
+</head>
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Salary
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Employee item in Model)
+            {
+                <tr>
+                    <td>
+                        @item._name
+                    </td>
+                    <td>
+                        @item._salary
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</body>
+</html>

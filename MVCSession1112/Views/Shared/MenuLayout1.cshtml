@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MenuLayout1</title>
+    @RenderSection("Head",false)
+</head>
+<body>
+    <div style="display:flex">
+        <div style="width:20%">
+            <div>
+                <span>Dare Academy</span>
+            </div>
+            <div>
+                <span>Home</span>
+            </div>
+        </div>
+        <div style="width:70%">
+            @RenderSection("Body")
+        </div>
+    </div>
+</body>
+</html>
